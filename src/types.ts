@@ -28,6 +28,7 @@ export interface IParkingSpot {
   removeVehicle(): void;
   getIsFree(): boolean;
   getType(): string;
+  getNumber(): string;
 }
 
 export interface IParkingSpotCreator {
@@ -39,9 +40,8 @@ export interface IParkingSpotFn {
 }
 
 export interface IParkingFloor {
-  updateDisplayBoard(): void;
+  updateDisplayBoard(type: string): void;
   addParkingSpot(parkingSpot: IParkingSpot): void;
-  assignVehicleToSpot(vehicle: IVehicle): void;
   removeParkingSpot(parkingSpot: IParkingSpot): void;
   getParkingSpots(): Map<string, Set<IParkingSpot>>;
 }

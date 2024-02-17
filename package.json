@@ -21,7 +21,7 @@
     "clean": "rm -rf build coverage",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
-    "test:unit": "jest",
+    "test:unit": "jest --config ./jest.config.js",
     "test:watch": "npm run jest -- --watch",
     "test": "npm run lint && npm run test:unit",
     "watch": "nodemon",

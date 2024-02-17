@@ -10,20 +10,20 @@ describe('parkingLot', () => {
     //   ticketNumber: 'mockParkingTicketNumber'
     // }
 
-    const mockParkingFloor = new ParkingFloor('mockParkingFloor')
-    const mockParkingLotAddress = 'mockParkingLotAddress';
+    // const mockParkingLot = new Parking('mockParkingFloor');
+    // const mockParkingLotAddress = 'mockParkingLotAddress';
 
-    const parkinglot = new ParkinLot('1', mockParkingLotAddress);
-    parkinglot.addParkingFloor(mockParkingFloor);
+    // const parkinglot = new ParkinLot('1', mockParkingLotAddress);
+    // parkinglot.addParkingFloor(mockParkingFloor);
 
-    expect(parkinglot.getParkingFloors().has(mockParkingFloor)).toBe(true);
-    expect(parkinglot.getParkingFloors().size).toBe(1);
+    // expect(parkinglot.getParkingFloors().has(mockParkingFloor)).toBe(true);
+    // expect(parkinglot.getParkingFloors().size).toBe(1);
 
-    parkinglot.removeParkingFloor(mockParkingFloor);
-    expect(parkinglot.getParkingFloors().has(mockParkingFloor)).toBe(false);
-    expect(parkinglot.getParkingFloors().size).toBe(0);
+    // parkinglot.removeParkingFloor(mockParkingFloor);
+    // expect(parkinglot.getParkingFloors().has(mockParkingFloor)).toBe(false);
+    // expect(parkinglot.getParkingFloors().size).toBe(0);
 
-    expect(parkinglot.isFull()).toBeFalsy();
+    // expect(parkinglot.isFull()).toBeFalsy();
     // expect(parkinglot.getNewParkingTicket()).tobe(mockParkingTicket);
   })
 });

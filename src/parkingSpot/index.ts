@@ -34,8 +34,13 @@ export class ParkingSpot implements IParkingSpot {
   getIsFree(): boolean {
     return this.free;
   }
+
   getType(): string {
     return this.type;
+  }
+
+  getNumber(): string {
+    return this.number;
   }
 }
 
@@ -51,7 +56,11 @@ export class ParkingSpotCreator implements IParkingSpotCreator {
   }
 }
 
-export class LargeSpot extends ParkingSpot {}
+export class LargeSpot extends ParkingSpot {
+  constructor(number: string) {
+    super(number, 'largeSpot');
+  }
+}
 
 export class CompactSpot extends ParkingSpot {
   constructor(number: string) {
@@ -59,6 +68,18 @@ export class CompactSpot extends ParkingSpot {
   }
 }
 
-export class ElectricSpot extends ParkingSpot {}
-export class MotorbikeSpot extends ParkingSpot {}
-export class HandicappedStop extends ParkingSpot {}
+export class ElectricSpot extends ParkingSpot {
+  constructor(number: string) {
+    super(number, 'electricSpot');
+  }
+}
+export class MotorbikeSpot extends ParkingSpot {
+  constructor(number: string) {
+    super(number, 'motorbikeSpot');
+  }
+}
+export class HandicappedStop extends ParkingSpot {
+  constructor(number: string) {
+    super(number, 'handicappedSpot');
+  }
+}
